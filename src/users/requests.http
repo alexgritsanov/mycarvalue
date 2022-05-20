@@ -1,0 +1,59 @@
+### Create a new user  / sign up
+POST http://localhost:3000/auth/signup
+content-type: application/json
+
+{
+    "email": "lesa@dasda1231.com",
+    "password": "aqwere"
+}
+
+###  sign in
+POST http://localhost:3000/auth/signin
+content-type: application/json
+
+{
+    "email": "lesa@dasda1231.com",
+    "password": "aqwere"
+}
+
+# Если вайт лист , то пропускает несмотря на интерфейс  
+
+### Get the currently signed in user
+
+
+GET  http://localhost:3000/auth/whoami
+
+### Sign out 
+POST  http://localhost:3000/auth/signout
+
+
+# Find a particular user with a given ID
+
+###  GET
+GET  http://localhost:3000/auth/1
+
+# Find all  users with a given email
+
+###  GET
+GET  http://localhost:3000/auth/?email=asdasf@dasda.com
+
+# Delete a user with a given email
+
+###  
+DELETE   http://localhost:3000/auth/23
+
+# Update a user 
+
+###  
+PATCH    http://localhost:3000/auth/141
+content-type: application/json
+
+{
+    "email": "abc@abc.com"
+}
+
+### Set a color
+GET    http://localhost:3000/auth/colors/red
+
+### Get a color
+GET    http://localhost:3000/auth/colors
